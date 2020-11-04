@@ -15,7 +15,7 @@ const logInForm = document.querySelector('#logInForm');
 const loginInput = document.querySelector('#login');
 const userName = document.querySelector('.user-name');
 const buttonOut = document.querySelector('.button-out');
-let login = '';
+let login = localStorage.getItem('delivery');
 
 function toggleModalAuth(){
   modalAuth.classList.toggle('is-open');
@@ -31,11 +31,12 @@ function authorized(){
 
   buttonOut.addEventListener('click' , logOut);
   function logOut(){
-   login = '';
-
+   login = null;
+    localStorage.removeItem('delivery');
     buttonAuth.style.display='';
     buttonOut.style.display = '';
     userName.style.display = '';
+    buttonOut.removeEventListener('click' , logOut);
     checkAuth();
   }
 }
@@ -44,9 +45,17 @@ function notAuthorized(){
   console.log('not');
   function logIn(event){
     event.preventDefault();
-    login = loginInput.value;
-    toggleModalAuth();
-    checkAuth();
+    if (login = loginInput.value){
+      toggleModalAuth();
+      buttonAuth.removeEventListener('click', toggleModalAuth);
+      closeAuth.removeEventListener('click', toggleModalAuth);
+      logInForm.removeEventListener('submit',logIn);
+      logInForm.reset();
+      checkAuth();
+    }else{
+      alert('Вы не авторизованы');
+    }
+localStorage.setItem('delivery' , login);
   }
   buttonAuth.addEventListener('click', toggleModalAuth);
   closeAuth.addEventListener('click', toggleModalAuth);
@@ -57,6 +66,7 @@ function checkAuth(){
     authorized();
   }else{
     notAuthorized();
+
   }
 }
 
