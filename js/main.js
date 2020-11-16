@@ -19,6 +19,7 @@ let login = localStorage.getItem('delivery');
 
 function toggleModalAuth(){
   modalAuth.classList.toggle('is-open');
+  loginInput.style.borderColor = '';
 }
 
 
@@ -45,7 +46,7 @@ function notAuthorized(){
   console.log('not');
   function logIn(event){
     event.preventDefault();
-    if (login = loginInput.value){
+    if (login = loginInput.value.trim()){
       toggleModalAuth();
       buttonAuth.removeEventListener('click', toggleModalAuth);
       closeAuth.removeEventListener('click', toggleModalAuth);
@@ -53,7 +54,8 @@ function notAuthorized(){
       logInForm.reset();
       checkAuth();
     }else{
-      alert('Вы не авторизованы');
+       loginInput.style.borderColor = '#ff0000';
+        loginInput.value = '';
     }
 localStorage.setItem('delivery' , login);
   }
@@ -71,3 +73,4 @@ function checkAuth(){
 }
 
 checkAuth();
+

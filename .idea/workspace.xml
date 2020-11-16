@@ -41,6 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -55,7 +56,12 @@
       <workItem from="1603985931889" duration="841000" />
       <workItem from="1604003644961" duration="3482000" />
       <workItem from="1604244420492" duration="42000" />
-      <workItem from="1604487390805" duration="10645000" />
+      <workItem from="1604487390805" duration="11359000" />
+      <workItem from="1604862752344" duration="57000" />
+      <workItem from="1605001004904" duration="1247000" />
+      <workItem from="1605130170056" duration="615000" />
+      <workItem from="1605468157446" duration="641000" />
+      <workItem from="1605469173267" duration="3926000" />
     </task>
     <task id="LOCAL-00001" summary="project delivery food lesson js start&#10;button-auth">
       <created>1603883819486</created>
@@ -78,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604516099200</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="localStorage end">
+      <created>1604519052059</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604519052059</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,24 +107,30 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project delivery food lesson js start&#10;button-auth" />
     <MESSAGE value="авторизация пользователя конец" />
-    <option name="LAST_COMMIT_MESSAGE" value="авторизация пользователя конец" />
+    <MESSAGE value="localStorage end" />
+    <option name="LAST_COMMIT_MESSAGE" value="localStorage end" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="830" y="319" width="449" height="522" key="FileChooserDialogImpl" timestamp="1604244460216">
+    <state x="830" y="319" width="449" height="522" key="FileChooserDialogImpl" timestamp="1605131979276">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="830" y="319" width="449" height="522" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1604244460216" />
+    <state x="830" y="319" width="449" height="522" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1605131979276" />
     <state x="897" y="475" width="326" height="209" key="Github.ShareDialog" timestamp="1603884032668">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="897" y="475" width="326" height="209" key="Github.ShareDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603884032668" />
-    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2" timestamp="1604516103488">
+    <state x="479" y="204" width="1024" height="737" key="SettingsEditor" timestamp="1605469121766">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1604516103488" />
+    <state x="479" y="204" width="1024" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1605469121766" />
+    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2" timestamp="1604519058524">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1604519058524" />
   </component>
 </project>
