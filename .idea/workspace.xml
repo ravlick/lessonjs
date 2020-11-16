@@ -19,14 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef6b85c4-e024-4976-98bd-ee5daca1d86d" name="Default Changelist" comment="localStorage">
+    <list default="true" id="ef6b85c4-e024-4976-98bd-ee5daca1d86d" name="Default Changelist" comment="Закрытие модального окна по клику на пустое место">
+      <change afterPath="$PROJECT_DIR$/js/disableScroll.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +52,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -61,7 +72,7 @@
       <workItem from="1605001004904" duration="1247000" />
       <workItem from="1605130170056" duration="615000" />
       <workItem from="1605468157446" duration="641000" />
-      <workItem from="1605469173267" duration="4751000" />
+      <workItem from="1605469173267" duration="9074000" />
     </task>
     <task id="LOCAL-00001" summary="project delivery food lesson js start&#10;button-auth">
       <created>1603883819486</created>
@@ -98,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605518608095</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Закрытие модального окна по клику на пустое место">
+      <created>1605519432335</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1605519432335</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,9 +139,14 @@
     <MESSAGE value="авторизация пользователя конец" />
     <MESSAGE value="localStorage end" />
     <MESSAGE value="localStorage" />
-    <option name="LAST_COMMIT_MESSAGE" value="localStorage" />
+    <MESSAGE value="Закрытие модального окна по клику на пустое место" />
+    <option name="LAST_COMMIT_MESSAGE" value="Закрытие модального окна по клику на пустое место" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="959" y="346" width="526" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605520693001">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="959" y="346" width="526" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1605520693001" />
     <state x="830" y="319" width="449" height="522" key="FileChooserDialogImpl" timestamp="1605131979276">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -136,9 +159,9 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="479" y="204" width="1024" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1605469121766" />
-    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2" timestamp="1605518613723">
+    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2" timestamp="1605519436864">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1605518613723" />
+    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1605519436864" />
   </component>
 </project>

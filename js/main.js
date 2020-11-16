@@ -7,6 +7,7 @@ close.addEventListener("click", toggleModal);
 
 function toggleModal() {
   modal.classList.toggle("is-open");
+
 }
 const buttonAuth = document.querySelector('.button-auth');
 const modalAuth = document.querySelector('.modal-auth');
@@ -17,13 +18,18 @@ const userName = document.querySelector('.user-name');
 const buttonOut = document.querySelector('.button-out');
 let login = localStorage.getItem('delivery');
 
-function toggleModalAuth(){
+function toggleModalAuth() {
   modalAuth.classList.toggle('is-open');
+    if(modalAuth.classList.contains("is-open")){
+        disableScroll();
+    }else{
+        enableScroll();
+    }
   loginInput.style.borderColor = '';
 }
 
 
-function authorized(){
+function authorized() {
   console.log(login);
   userName.textContent = login;
   buttonAuth.style.display='none';
@@ -42,11 +48,11 @@ function authorized(){
   }
 }
 
-function notAuthorized(){
+function notAuthorized() {
   console.log('not');
   function logIn(event){
     event.preventDefault();
-    if (login = loginInput.value.trim()){
+    if (login = loginInput.value.trim()) {
       toggleModalAuth();
       buttonAuth.removeEventListener('click', toggleModalAuth);
       closeAuth.removeEventListener('click', toggleModalAuth);
@@ -63,7 +69,7 @@ localStorage.setItem('delivery' , login);
   closeAuth.addEventListener('click', toggleModalAuth);
   logInForm.addEventListener('submit',logIn);
 }
-function checkAuth(){
+function checkAuth() {
   if (login){
     authorized();
   }else{
@@ -76,8 +82,8 @@ checkAuth();
 
 // Закрытие модального окна по клику на пустое место
 
-modalAuth.addEventListener('click' , function(event){
-  console.log(event.target);
+modalAuth.addEventListener('click' , function(event) {
+  //console.log(event.target);
   if(event.target.classList.contains('is-open')){
     toggleModalAuth();
   }
