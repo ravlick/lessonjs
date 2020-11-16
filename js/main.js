@@ -74,3 +74,11 @@ function checkAuth(){
 
 checkAuth();
 
+// Закрытие модального окна по клику на пустое место
+
+modalAuth.addEventListener('click' , function(event){
+  console.log(event.target);
+  if(event.target.classList.contains('is-open')){
+    toggleModalAuth();
+  }
+});

@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef6b85c4-e024-4976-98bd-ee5daca1d86d" name="Default Changelist" comment="project delivery food lesson js start&#10;button-auth">
+    <list default="true" id="ef6b85c4-e024-4976-98bd-ee5daca1d86d" name="Default Changelist" comment="localStorage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
@@ -61,7 +61,7 @@
       <workItem from="1605001004904" duration="1247000" />
       <workItem from="1605130170056" duration="615000" />
       <workItem from="1605468157446" duration="641000" />
-      <workItem from="1605469173267" duration="3926000" />
+      <workItem from="1605469173267" duration="4751000" />
     </task>
     <task id="LOCAL-00001" summary="project delivery food lesson js start&#10;button-auth">
       <created>1603883819486</created>
@@ -91,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604519052059</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="localStorage">
+      <created>1605518608095</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605518608095</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,7 +120,8 @@
     <MESSAGE value="project delivery food lesson js start&#10;button-auth" />
     <MESSAGE value="авторизация пользователя конец" />
     <MESSAGE value="localStorage end" />
-    <option name="LAST_COMMIT_MESSAGE" value="localStorage end" />
+    <MESSAGE value="localStorage" />
+    <option name="LAST_COMMIT_MESSAGE" value="localStorage" />
   </component>
   <component name="WindowStateProjectService">
     <state x="830" y="319" width="449" height="522" key="FileChooserDialogImpl" timestamp="1605131979276">
@@ -128,9 +136,9 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="479" y="204" width="1024" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1605469121766" />
-    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2" timestamp="1604519058524">
+    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2" timestamp="1605518613723">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1604519058524" />
+    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1605518613723" />
   </component>
 </project>
