@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6b85c4-e024-4976-98bd-ee5daca1d86d" name="Default Changelist" comment="Закрытие модального окна по клику на пустое место">
-      <change afterPath="$PROJECT_DIR$/js/disableScroll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +70,7 @@
       <workItem from="1605130170056" duration="615000" />
       <workItem from="1605468157446" duration="641000" />
       <workItem from="1605469173267" duration="9074000" />
+      <workItem from="1608552790258" duration="18000" />
     </task>
     <task id="LOCAL-00001" summary="project delivery food lesson js start&#10;button-auth">
       <created>1603883819486</created>
