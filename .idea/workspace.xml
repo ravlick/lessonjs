@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef6b85c4-e024-4976-98bd-ee5daca1d86d" name="Default Changelist" comment="Закрытие модального окна по клику на пустое место">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +73,28 @@
       <workItem from="1605130170056" duration="615000" />
       <workItem from="1605468157446" duration="641000" />
       <workItem from="1605469173267" duration="9074000" />
-      <workItem from="1608552790258" duration="18000" />
+      <workItem from="1608552790258" duration="1338000" />
+      <workItem from="1608627594852" duration="1187000" />
+      <workItem from="1609101341743" duration="40175000" />
+      <workItem from="1609188738240" duration="599000" />
+      <workItem from="1609520690531" duration="40000" />
+      <workItem from="1610024807546" duration="13000" />
+      <workItem from="1613659791588" duration="668000" />
+      <workItem from="1613765324062" duration="1227000" />
+      <workItem from="1613809572099" duration="3209000" />
+      <workItem from="1614869228919" duration="5380000" />
+      <workItem from="1615361771789" duration="7250000" />
+      <workItem from="1615387364677" duration="1271000" />
+      <workItem from="1617789324281" duration="2343000" />
+      <workItem from="1617796954826" duration="799000" />
+      <workItem from="1617970109784" duration="1296000" />
+      <workItem from="1618209686150" duration="3598000" />
+      <workItem from="1618233592444" duration="7934000" />
+      <workItem from="1618383117530" duration="6544000" />
+      <workItem from="1618408408400" duration="6952000" />
+      <workItem from="1618561936653" duration="4104000" />
+      <workItem from="1618598624205" duration="4165000" />
+      <workItem from="1618746680998" duration="6626000" />
     </task>
     <task id="LOCAL-00001" summary="project delivery food lesson js start&#10;button-auth">
       <created>1603883819486</created>
@@ -114,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605519432335</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="test commit">
+      <created>1608552852740</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608552852740</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,28 +169,7 @@
     <MESSAGE value="localStorage end" />
     <MESSAGE value="localStorage" />
     <MESSAGE value="Закрытие модального окна по клику на пустое место" />
-    <option name="LAST_COMMIT_MESSAGE" value="Закрытие модального окна по клику на пустое место" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="959" y="346" width="526" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605520693001">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="959" y="346" width="526" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1605520693001" />
-    <state x="830" y="319" width="449" height="522" key="FileChooserDialogImpl" timestamp="1605131979276">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="830" y="319" width="449" height="522" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1605131979276" />
-    <state x="897" y="475" width="326" height="209" key="Github.ShareDialog" timestamp="1603884032668">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="897" y="475" width="326" height="209" key="Github.ShareDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603884032668" />
-    <state x="479" y="204" width="1024" height="737" key="SettingsEditor" timestamp="1605469121766">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="479" y="204" width="1024" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1605469121766" />
-    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2" timestamp="1605519436864">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="654" y="308" width="802" height="543" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1605519436864" />
+    <MESSAGE value="test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
   </component>
 </project>
