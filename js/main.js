@@ -47,16 +47,17 @@ const cardsMenu = document.querySelector('.cards-menu');
 //пишем функцию, которая будет работать с базой данных сразу после переменных
 //такую функцию можно вызвать после ее объявления
 const getData = async function(url){
-    // выполнение не начнется пока await не выполнится
+    // await говорит о том, что выполнение следующей строки не начнется пока эта не выполнится
     const response = await fetch(url);
-    //fetch запрашивает данные promise(обещание)
+    //fetch запрашивает данные на сервер promise(обещание)
     if(!response.ok){
-        //сбросим ошибку
+        //throw сбросим ошибку
         throw new Error(`Error adress ${url}, статус
         ${response.status} !`)
     }
     //console.log(response.json());
      return await response.json();
+    //данные появляются после выполнения метода json
 };
 
 getData('./db/partners.json');
