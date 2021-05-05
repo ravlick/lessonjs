@@ -2,35 +2,14 @@
 const buttonAuth = document.querySelector('.button-auth');
 const modalAuth = document.querySelector('.modal-auth');
 const closeAuth = document.querySelector('.close-auth');
-
-
 const cartButton = document.querySelector("#cart-button");
 const modal = document.querySelector(".modal");
 const close = document.querySelector(".close");
-
-function toggleModalAuth() {
-  modalAuth.classList.toggle("is-open");
-
-}
-buttonAuth.addEventListener("click", toggleModalAuth);
-closeAuth.addEventListener("click" , toggleModalAuth);
-
-
-cartButton.addEventListener("click", toggleModal);
-close.addEventListener("click", toggleModal);
-
-function toggleModal() {
-  modal.classList.toggle("is-open");
-
-}
-//console.dir(modalAuth);
 const logInForm = document.querySelector('#logInForm');
 const loginInput = document.querySelector('#login');
 const userName = document.querySelector('.user-name');
 const buttonOut = document.querySelector('.button-out');
 let login = localStorage.getItem('delivery'); // получаем данные которые пришли в переменную логин
-
-//new
 const cardsRestaurants = document.querySelector('.cards-restaurants');
 // получаем промо
 const containerPromo = document.querySelector('.container-promo');
@@ -42,6 +21,35 @@ const menu = document.querySelector('.menu');
 const logo = document.querySelector('.logo');
 // single card
 const cardsMenu = document.querySelector('.cards-menu');
+const modalBody = document.querySelector('.modal-body');
+const modalPrice = document.querySelector('.modal-pricetag')
+
+
+const cart = [];
+
+
+
+function toggleModalAuth() {
+  modalAuth.classList.toggle("is-open");
+
+}
+buttonAuth.addEventListener("click", toggleModalAuth);
+closeAuth.addEventListener("click" , toggleModalAuth);
+
+
+//cartButton.addEventListener("click", toggleModal);
+
+
+
+close.addEventListener("click", toggleModal);
+
+function toggleModal() {
+  modal.classList.toggle("is-open");
+
+
+}
+//console.dir(modalAuth);
+
 
 
 //пишем функцию, которая будет работать с базой данных сразу после переменных
@@ -79,8 +87,9 @@ function authorized() {
   console.log(login);
   userName.textContent = login;
   buttonAuth.style.display='none';
-  buttonOut.style.display = 'block';
+  buttonOut.style.display = 'flex';
   userName.style.display = 'inline';
+  cartButton.style.display = 'flex';
 
   buttonOut.addEventListener('click' , logOut);
   function logOut(){
@@ -89,6 +98,7 @@ function authorized() {
     buttonAuth.style.display='';
     buttonOut.style.display = '';
     userName.style.display = '';
+    cartButton.style.display = '';
     buttonOut.removeEventListener('click' , logOut);
     checkAuth();
   }
@@ -205,11 +215,11 @@ function createCardGood(goods){
             </div>
         </div>
         <div class="card-buttons">
-            <button class="button button-primary button-add-cart">
+            <button class="button button-primary button-add-cart" id="${id}">
                 <span class="button-card-text">В корзину</span>
                 <span class="button-cart-svg"></span>
             </button>
-            <strong class="card-price-bold">${price}</strong>
+            <strong class="card-price card-price-bold">${price}</strong>
         </div>
        </div>
   
@@ -242,14 +252,98 @@ function openGoods(event){
     }
 
 }
+//добавляем товар в корзину
+function addToCart(event){
+    const target = event.target;
+    const buttonAddToCart = target.closest('.button-add-cart');
+    if(buttonAddToCart){
+        const card = target.closest('.card');
+        const title = card.querySelector('.card-title-reg').textContent;
+        const cost = card.querySelector('.card-price').textContent;
+        const id = buttonAddToCart.id;
+        //console.log(title,cost,id);
+        // проверяем есть ли такой продук с таким айдишником
+        const food = cart.find(function(item){
+            return item.id === id;
+        });
+
+        if(food){
+            food.count = food.count +1;
+            // food.count += 1;
+        }else{
+            cart.push({
+                id,
+                title,
+               cost,
+                count:1
+            });
 
 
+        }
+        console.log(cart);
+    }
+}
+//выводим элементы в корзине
+function renderCart(){
+    modalBody.textContent = '';
+
+    cart.forEach(function({ id,title,cost,count }){
+        const itemCart = `
+<div class="food-row">
+    <span class="food-name">${title}</span>
+        <strong class="food-price">${cost} ₽</strong>
+        <div class="food-counter">
+            <button class="counter-button counter-minus" data-id=${id}>-</button>
+            <span class="counter">${count}</span>
+            <button class="counter-button counter-plus" data-id=${id}>+</button>
+        </div>
+ </div>
+`;
+        modalBody.insertAdjacentHTML('afterbegin', itemCart);
+    });
+    //аккумулирует данніе
+    const totalPrice = cart.reduce(function(result,item){
+        return result + (parseFloat(item.cost) * item.count);
+    }, 0);
+    modalPrice.textContent = totalPrice + ' grn';
+}
+
+//в модальном окне меняем количество
+function changeCount(event){
+    const target = event.target;
+
+    // if(target.classList.contains('counter-button')){
+    //
+    // }
+
+    if(target.classList.contains('.counter-minus')){
+        const food = cart.find(function(item){
+            return item.id === target.dataset.id;
+        });
+        food.count--;
+        renderCart();
+    }
+    if(target.classList.contains('.counter-plus')) {
+        const food = cart.find(function (item) {
+            return item.id === target.dataset.id;
+        });
+        food.count++;
+        renderCart();
+    }
+
+}
 function init(){
     //с помощью then обрабатываем промисы
     getData('./db/partners.json').then(function(data){
         data.forEach(createCardsRestaurants)
     });
+    modalBody.addEventListener('click', changeCount);
     cardsRestaurants.addEventListener('click' , openGoods);
+    cartButton.addEventListener('click', function(){
+        renderCart();
+        toggleModal();
+    });
+    cardsMenu.addEventListener('click', addToCart);
     logo.addEventListener('click' , function(){
         containerPromo.classList.remove('hide')
         restaurants.classList.remove('hide')
