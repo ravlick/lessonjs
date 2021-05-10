@@ -21,9 +21,9 @@ const menu = document.querySelector('.menu');
 const logo = document.querySelector('.logo');
 // single card
 const cardsMenu = document.querySelector('.cards-menu');
-const modalBody = document.querySelector('.modal-body');
+const modalBody = document.querySelector('.mm');
 const modalPrice = document.querySelector('.modal-pricetag')
-
+const buttonClearCart = document.querySelector('.clear-cart');
 
 const cart = [];
 
@@ -33,21 +33,20 @@ function toggleModalAuth() {
   modalAuth.classList.toggle("is-open");
 
 }
+function toggleModal() {
+    modal.classList.toggle("is-open");
+
+
+}
 buttonAuth.addEventListener("click", toggleModalAuth);
 closeAuth.addEventListener("click" , toggleModalAuth);
 
-
-//cartButton.addEventListener("click", toggleModal);
 
 
 
 close.addEventListener("click", toggleModal);
 
-function toggleModal() {
-  modal.classList.toggle("is-open");
 
-
-}
 //console.dir(modalAuth);
 
 
@@ -311,27 +310,25 @@ function renderCart(){
 //в модальном окне меняем количество
 function changeCount(event){
     const target = event.target;
-
-    // if(target.classList.contains('counter-button')){
-    //
-    // }
-
-    if(target.classList.contains('.counter-minus')){
-        const food = cart.find(function(item){
-            return item.id === target.dataset.id;
-        });
+if(target.classList.contains('counter-button')){
+    const food = cart.find(function(item){
+        return item.id === target.dataset.id;
+    });
+    if(target.classList.contains('counter-minus')){
         food.count--;
-        renderCart();
+        if(food.count === 0){
+            cart.splice(cart.indexOf(food),1);
+        }
     }
-    if(target.classList.contains('.counter-plus')) {
-        const food = cart.find(function (item) {
-            return item.id === target.dataset.id;
-        });
+    if(target.classList.contains('counter-plus')){
         food.count++;
-        renderCart();
     }
+    renderCart();
+}
+
 
 }
+
 function init(){
     //с помощью then обрабатываем промисы
     getData('./db/partners.json').then(function(data){
@@ -348,6 +345,10 @@ function init(){
         containerPromo.classList.remove('hide')
         restaurants.classList.remove('hide')
         menu.classList.add('hide')
+    });
+    buttonClearCart.addEventListener('click' , function(){
+        cart.length = 0;
+        renderCart();
     });
 }
 init();
